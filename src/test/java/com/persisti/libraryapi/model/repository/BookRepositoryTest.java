@@ -1,7 +1,6 @@
-package com.persisti.libraryapi.model.respository;
+package com.persisti.libraryapi.model.repository;
 
 import com.persisti.libraryapi.model.entity.Book;
-import com.persisti.libraryapi.model.repository.BookRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,7 +13,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Optional;
 
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
@@ -43,7 +41,7 @@ public class BookRepositoryTest {
         assertThat(exists).isTrue();
     }
 
-    private static Book createNewBook(String isbn) {
+    public static Book createNewBook(String isbn) {
         return Book.builder().title("Teste").author("Teste").isbn("1234").build();
     }
 

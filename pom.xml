@@ -74,7 +74,12 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>8.0.0.Final</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.persisti</groupId>
+            <artifactId>library-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
