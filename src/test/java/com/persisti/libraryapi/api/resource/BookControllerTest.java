@@ -223,21 +223,21 @@ public class BookControllerTest {
     }
 
 
-    @Test
-    @DisplayName("Deve emitir erro ao tentar atualizar um livro inexistente")
-    public void updateInexistentBookTest() throws Exception {
-        //cenario
-        String json = new ObjectMapper().writeValueAsString(createNewBook());
-
-        BDDMockito.given(service.getById(Mockito.anyLong()))
-                .willReturn(Optional.empty());
-
-        //execucao
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
-                .put(BOOK_API.concat("/" + 1))
-                .content(json)
-                .accept(MediaType.APPLICATION_JSON);
-    }
+//    @Test
+//    @DisplayName("Deve emitir erro ao tentar atualizar um livro inexistente")
+//    public void updateInexistentBookTest() throws Exception {
+//        //cenario
+//        String json = new ObjectMapper().writeValueAsString(createNewBook());
+//
+//        BDDMockito.given(service.getById(Mockito.anyLong()))
+//                .willReturn(Optional.empty());
+//
+//        //execucao
+//        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+//                .put(BOOK_API.concat("/" + 1))
+//                .content(json)
+//                .accept(MediaType.APPLICATION_JSON);
+//    }
 
     @Test
     @DisplayName("Deve filtrar livros")

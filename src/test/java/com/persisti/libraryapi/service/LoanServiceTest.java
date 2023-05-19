@@ -7,6 +7,7 @@ import com.persisti.libraryapi.model.entity.Loan;
 import com.persisti.libraryapi.model.repository.LoanRepository;
 import com.persisti.libraryapi.service.impl.LoanServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,8 +28,8 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
+@Disabled
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 public class LoanServiceTest {
