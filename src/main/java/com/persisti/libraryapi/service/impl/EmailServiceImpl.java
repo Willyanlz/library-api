@@ -23,11 +23,13 @@
 //
 //        String[] mails = mailsList.toArray(new String[mailsList.size()]);
 //
+//        String mail = "willyagenaro4321@gmail.com";
+//
 //        SimpleMailMessage mailMessage = new SimpleMailMessage();
 //        mailMessage.setFrom(remetent);
 //        mailMessage.setSubject("Livro com empréstimo atrasado");
 //        mailMessage.setText(message);
-//        mailMessage.setTo(mails);
+//        mailMessage.setTo(mail);
 //
 //        javaMailSender.send(mailMessage);
 //    }
