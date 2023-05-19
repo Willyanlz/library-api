@@ -23,6 +23,9 @@ package com.persisti.libraryapi.model.repository;
         import org.springframework.data.jpa.repository.Query;
         import org.springframework.data.repository.query.Param;
 
+        import java.time.LocalDate;
+        import java.util.List;
+
 public interface LoanRepository extends JpaRepository<Loan, Long> {
 
     @Query(value = "SELECT CASE WHEN COUNT(l.id) > 0 THEN true ELSE false END " +
@@ -35,6 +38,12 @@ public interface LoanRepository extends JpaRepository<Loan, Long> {
             @Param("customer") String customer,
             Pageable pageRequest
     );
+
+    Page<Loan> findByBook(Book book, Pageable pageable);
+
+    @Query("SELECT l FROM Loan l WHERE l.loanDate <= :threeDaysAgo AND (l.returned IS NULL OR l.returned <> true)")
+    List<Loan> findByLoanDateLessThanAndNotReturned(@Param("threeDaysAgo") LocalDate threeDaysAgo);
+
 }
 
 

@@ -1,2 +1,7 @@
-package com.persisti.libraryapi.service;public class EmailService {
-}
+//package com.persisti.libraryapi.service;
+//
+//import java.util.List;
+//
+//public interface EmailService {
+//    void sendMails(String message, List<String> mailsList);
+//}

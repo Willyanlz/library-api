@@ -1,10 +1,12 @@
 package com.persisti.libraryapi.model.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Builder
@@ -26,4 +28,7 @@ public class Book {
 
     @Column
     private String isbn;
+
+    @OneToMany(mappedBy = "book")
+    private List<Loan> loans;
 }
