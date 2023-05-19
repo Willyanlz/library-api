@@ -1,6 +1,7 @@
 package com.persisti.libraryapi.model.repository;
 
 import com.persisti.libraryapi.model.entity.Book;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -98,7 +99,7 @@ public class BookRepositoryTest {
         Optional<Book> notFoundBook = repository.findById(book.getId());
 
         //verificacao
-        assertThat(notFoundBook.isEmpty()).isTrue();
+        Assertions.assertThat(notFoundBook.isEmpty()).isTrue();
     }
 
     @Test

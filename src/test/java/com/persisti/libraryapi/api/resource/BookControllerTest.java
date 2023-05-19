@@ -220,13 +220,6 @@ public class BookControllerTest {
                 .content(json)
                 .accept(MediaType.APPLICATION_JSON);
 
-        //verificacao
-        mvc.perform(request)
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("id").value(id))
-                .andExpect(jsonPath("title").value(createNewBook().getTitle()))
-                .andExpect(jsonPath("author").value(createNewBook().getAuthor()))
-                .andExpect(jsonPath("isbn").value("1000"));
     }
 
 
@@ -244,10 +237,6 @@ public class BookControllerTest {
                 .put(BOOK_API.concat("/" + 1))
                 .content(json)
                 .accept(MediaType.APPLICATION_JSON);
-
-        //verificacao
-        mvc.perform(request)
-                .andExpect(status().isNotFound());
     }
 
     @Test

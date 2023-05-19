@@ -68,7 +68,7 @@ public class BookController {
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation("UPDATE A BOOK DETAILS BY ID")
-    public BookDTO update(@PathVariable Long id, BookDTO dto){
+    public BookDTO update(@PathVariable Long id, @RequestBody @Valid BookDTO dto){
         log.info("atualizando um livro");
         return service.getById(id).map( book -> {
 
