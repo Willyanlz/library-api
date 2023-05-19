@@ -3,4 +3,4 @@ jdk:
   - oraclejdk20
 dist: trusty
 before_install:
-  - chmod +x mnvw
+  - chmod +x mvnw
