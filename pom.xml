@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.persisti</groupId> <!-- Remova o caractere "-->
+	<groupId>com.persisti</groupId>
 
 	<artifactId>library-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
