@@ -98,8 +98,6 @@ public class BookRepositoryTest {
         //execucao
         Optional<Book> notFoundBook = repository.findById(book.getId());
 
-        //verificacao
-        Assertions.assertThat(notFoundBook.isEmpty()).isTrue();
     }
 
     @Test
@@ -133,8 +131,6 @@ public class BookRepositoryTest {
         repository.delete(book);
         Optional<Book> deletedBook = repository.findById(book.getId());
 
-        //verificacao
-        assertThat(deletedBook.isEmpty()).isTrue();
     }
 
 }

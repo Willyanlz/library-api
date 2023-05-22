@@ -72,8 +72,7 @@ public class BookControllerTest {
                 .andExpect(jsonPath("id").value(10l))
                 .andExpect(jsonPath("title").value(dto.getTitle()))
                 .andExpect(jsonPath("author").value(dto.getAuthor()))
-                .andExpect(jsonPath("isbn").value(dto.getIsbn()))
-                ;
+                .andExpect(jsonPath("isbn").value(dto.getIsbn()));
     }
 
 

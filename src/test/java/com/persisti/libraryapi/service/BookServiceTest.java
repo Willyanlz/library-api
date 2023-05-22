@@ -19,7 +19,6 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Disabled
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 public class BookServiceTest {
@@ -57,7 +56,7 @@ public class BookServiceTest {
         Book savedBook = service.save(book);
 
         //verificação
-        assertThat(savedBook.getId()).isNotNull();
+        Assertions.assertThat(savedBook.getId()).isNotNull();
         assertThat(savedBook.getIsbn()).isEqualTo("1234");
         assertThat(savedBook.getTitle()).isEqualTo("Teste");
         assertThat(savedBook.getAuthor()).isEqualTo("Teste");

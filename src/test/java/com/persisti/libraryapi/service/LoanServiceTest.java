@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.mockito.Mockito.verify;
 
-@Disabled
+
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 public class LoanServiceTest {
